@@ -1,0 +1,274 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="zxx">
+{% load static %}
+
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Cleanfreshly a Home Maintenance & Service Category Bootstrap Responsive Web Template | Home :: W3layouts
+	</title>
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/style-starter.css'%}">
+	<link rel="stylesheet" href="{% static 'assets/css/rstyle.css'%}">
+	<!-- Template CSS -->
+	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:400,400i,500,600,700&display=swap"
+		rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Lato:300,400,400i,700&display=swap" rel="stylesheet">
+
+	<!-- Template CSS -->
+	<style>
+		.hidden {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 100;
+    }
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+
+		ul li {
+        list-style-type: disc;
+        margin-bottom: 5px;
+    }
+	</style>
+</head>
+
+<body>
+
+
+<!--w3l-header-->
+	<section class="w3l-top-header-content">
+		<div class="hny-top-menu">
+			<div class="container">
+				<div class="row">
+					<ul class="accounts col-sm-8">
+						<li class="top_li"><span class="fa fa-clock-o"></span> <a href="#">Monday - Friday: 10:00 -
+								18:00</a>
+						</li>
+						<li class="top_li mr-lg-0"><span class="fa fa-envelope-o"></span> <a
+								href="mailto:mail@company.com" class="mail"> cleanfreshly10@gmail.com</a>
+
+						</li>
+						<li class="top_li"><span class="fa fa-phone"></span> <a href="tel:+142 5897555">8921207450
+								</a>
+						</li>
+
+					</ul>
+<!--					<ul class="social-top col-sm-4">-->
+<!--						<li><a href="#"><span class="fa fa-facebook"></span></a></li>-->
+<!--						<li><a href="#"><span class="fa fa-instagram"></span></a> </li>-->
+<!--						<li><a href="#"><span class="fa fa-twitter"></span></a></li>-->
+<!--						<li><a href="#"><span class="fa fa-vimeo"></span></a></li>-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-linkedin"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--//top-header-content-->
+	<header class="w3l-header-nav">
+		<!--/nav-->
+		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
+			<a href="login"><span class="fa fa-arrow-circle-left  btn btn-secondary "></span></a>
+			<div class="container">
+				<h1><a class="navbar-brand" >Clean<span>Freshly</span></a></h1>
+				<!-- if logo is image enable this
+						<a class="navbar-brand" href="#index">
+							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+						</a> -->
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<!-- <span class="navbar-toggler-icon"></span> -->
+					<span class="fa icon-expand fa-bars"></span>
+					<span class="fa icon-close fa-times"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="/">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="services">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact">Contact</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+		<!--//nav-->
+	</header>
+<!--------------------------->
+<!--{% if messages %}-->
+<!--<div class="container">-->
+<!--<div class="alert alert-success alert-dismissible messages">-->
+<!--    {% for message in messages %}-->
+<!--    <button type="button" class="close" data-dismiss="alert">&times;</button>-->
+<!--     {{message}}-->
+<!--  </div>-->
+<!--     {% endfor %}-->
+<!--</div>-->
+<!--{% endif %}-->
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--	------------->
+	{% if messages %}
+<div class="container">
+<div class="alert alert-success alert-dismissible messages">
+    {% for message in messages %}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+     {{message}}
+  </div>
+     {% endfor %}
+</div>
+{% endif %}
+<!--	------------>
+<div class="header">
+
+</div>
+<div class="w3-main">
+	<!-- Main -->
+	<div class="about-bottom main-agile book-form">
+
+		<h2 class="tittle">Register Here</h2>
+		<form action="../userregister" method="POST" enctype="multipart/form-data" >
+			{% csrf_token %}
+			<div class="form-date-w3-agileits">
+				<label> Name </label>
+				<input type="text" name="name" placeholder="Your Name" required="">
+				<label>image</label>
+				<input type="file" name="frimg1" placeholder="user_image" accept="images/*" style="padding: 8px 16px;border: 1px solid rgba(242,186,46,1); width: 93%;" required=""><br><br>
+				<label> Email </label>
+				<input type="email" name="email" placeholder="Your Email" required="">
+				<label> Mobile_Number </label>
+				<input type="tel" name="number" placeholder="Your Mobile_number" pattern="[0-9]{10}" style="width: 100%;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+line-height: 25px;
+    padding: 8px 16px;
+border: 1px solid rgba(242,186,46,1);
+background: transparent;
+color: #fff;
+margin-bottom:1.8em;width: 93%;" required=""><br><br>
+				<label> state</label>
+				<input type="text" name="state" placeholder="state" required="">
+				<label> district</label>
+				<input type="text" name="district" placeholder="District" required="">
+				<label> Pin_code</label>
+				<input type="number" name="pin_code" placeholder="Pin_code" style="width: 100%;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+line-height: 25px;
+    padding: 8px 16px;
+border: 1px solid rgba(242,186,46,1);
+background: transparent;
+color: #fff;
+margin-bottom:1.8em;width: 93%;"  required="">
+				<label> Address </label>
+				<textarea  name="address" id="address" placeholder="Your Address" rows="4" cols="40"  required=""></textarea>
+				<label> user_name</label>
+				<input type="text" name="user_name" placeholder="user_name" required="">
+				<label> Password </label>
+				<input type="password" name="password" id="c_password" placeholder="Your Password"  required="">
+				<label> CONFIRM Password </label>
+				<input type="password" name="c_password"  placeholder="Confirm Password"   required="">
+				<div id="password-instructions"  class="hidden" style="position:absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        padding: 15px;
+        max-width: 300px;
+        z-index: 100;
+        font-size: 14px;
+        line-height: 1.5;">
+    <p>Instructions for creating a strong password:</p>
+    <ul>
+        <li>Include at least one uppercase letter</li>
+        <li>Include at least one number</li>
+        <li>Use special characters like !, @, #, etc.</li>
+        <li>Make it at least 8 characters long</li>
+    </ul>
+</div>
+			</div>
+			<div class="make wow shake">
+				  <input type="submit" id="submit" value="Register">
+			</div>
+		</form>
+
+	</div>
+	<!-- //Main -->
+
+</div>
+
+
+<!-- footer -->
+<div class="footer-w3l">
+	<p>&copy; 2024. All rights reserved | Design by sachin James</p>
+</div>
+<!-- //footer -->
+<script>
+    // Function to show password instructions
+    function showPasswordInstructions() {
+        document.getElementById('password-instructions').classList.remove('hidden');
+    }
+
+    // Function to hide password instructions
+    function hidePasswordInstructions() {
+        document.getElementById('password-instructions').classList.add('hidden');
+    }
+
+    // Event listener to show instructions when password field is clicked
+    document.getElementById('c_password').addEventListener('focus', showPasswordInstructions);
+
+    // Event listener to hide instructions when password field loses focus
+    document.getElementById('c_password').addEventListener('blur', hidePasswordInstructions);
+</script>
+<!-- js-scripts-->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<script type="text/javascript" src="js/jqueryr-2.1.4.min.js"></script>
+		<script>$(document).ready(function(c) {
+		$('.alert-close').on('click', function(c){
+			$('.main-agile').fadeOut('slow', function(c){
+				$('.main-agile').remove();
+			});
+		});
+	});
+	</script>
+<!-- //js-scripts-->
+
+
+
+
+
+</body>
+</html>

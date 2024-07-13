@@ -1,0 +1,192 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="zxx">
+{% load static %}
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Cleanfreshly a Home Maintenance & Service Category Bootstrap Responsive Web Template | Home :: W3layouts
+	</title>
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/style-starter.css'%}">
+		<link rel="stylesheet" href="{% static 'assets/css/l1style.css'%}">
+	<!-- Template CSS -->
+	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:400,400i,500,600,700&display=swap"
+		rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Lato:300,400,400i,700&display=swap" rel="stylesheet">
+	<!-- Template CSS -->
+	<style>
+        /* Bootstrap 4 alert styles */
+        .alert {
+            position: relative;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+            background-color: #fff;
+        }
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+        .alert-warning {
+            color: #856404;
+            background-color: #fff3cd;
+            border-color: #ffeeba;
+        }
+        .alert-info {
+            color: #0c5460;
+            background-color: #d1ecf1;
+            border-color: #bee5eb;
+        }
+        .alert-dismissible {
+            padding-right: 4rem;
+        }
+        .alert-dismissible .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0.75rem 1.25rem;
+            color: inherit;
+        }
+    </style>
+
+</head>
+
+<body>
+	<!--w3l-header-->
+	<section class="w3l-top-header-content">
+		<div class="hny-top-menu">
+			<div class="container">
+				<div class="row">
+					<ul class="accounts col-sm-8">
+						<li class="top_li"><span class="fa fa-clock-o"></span> <a href="#">Monday - Friday: 10:00 -
+								18:00</a>
+						</li>
+						<li class="top_li mr-lg-0"><span class="fa fa-envelope-o"></span> <a
+								href="mailto:mail@company.com" class="mail"> cleanfreshly10@gmail.com</a>
+
+						</li>
+						<li class="top_li"><span class="fa fa-phone"></span> <a href="tel:+142 5897555">8921207450
+								</a>
+						</li>
+
+					</ul>
+<!--					<ul class="social-top col-sm-4">-->
+<!--						<li><a href="#"><span class="fa fa-facebook"></span></a></li>-->
+<!--						<li><a href="#"><span class="fa fa-instagram"></span></a> </li>-->
+<!--						<li><a href="#"><span class="fa fa-twitter"></span></a></li>-->
+<!--						<li><a href="#"><span class="fa fa-vimeo"></span></a></li>-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-linkedin"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--//top-header-content-->
+	<header class="w3l-header-nav">
+		<!--/nav-->
+		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
+			<div class="container">
+				<h1><a class="navbar-brand" href="/">Clean<span>Freshly</span></a></h1>
+				<!-- if logo is image enable this
+						<a class="navbar-brand" href="#index">
+							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+						</a> -->
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<!-- <span class="navbar-toggler-icon"></span> -->
+					<span class="fa icon-expand fa-bars"></span>
+					<span class="fa icon-close fa-times"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" style="color:#fff" href="/">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="color:#fff" href="about">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link"style="color:#fff" href="services">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" style="color:#fff" href="contact">Contact</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+		<!--//nav-->
+	</header>
+<!--	------------->
+
+<!--	------------>
+	{% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!--	------------>
+
+	<div class=" w3l-login-form">
+
+        <h2>Login Here</h2>
+        <form action="login" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+
+            <div class=" w3l-form-group">
+                <label>Username:</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="form-control" name="user_name" placeholder="Username" required="required" />
+                </div>
+            </div>
+            <div class=" w3l-form-group">
+                <label>Password:</label>
+                <div class="group">
+                    <i class="fas fa-unlock"></i>
+                    <input type="password" class="form-control" name="password" placeholder="Password" required="required" />
+                </div>
+            </div>
+            <div class="forgot">
+                <a href="forgot_password">Forgot Password?</a>
+<!--                <p><input type="checkbox">Remember Me</p>-->
+            </div>
+			<a href="login"><button type="submit" id="submit">Login</button></a>
+        </form>
+        <p class=" w3l-register-p">Don't have an account?<a href="userregister" class="register">user Register</a></p>
+		<p class=" w3l-register-p">sign up as employee<a href="emp_register" class="register">employee_Register</a></p>
+    </div>
+
+</body>
+</html>
+

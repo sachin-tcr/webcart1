@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="zxx">
+{% load static %}
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Cleanfreshly a Home Maintenance & Service Category Bootstrap Responsive Web Template | Services :: W3layouts
+	</title>
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/style-starter.css'%}">
+	<!-- Template CSS -->
+	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:400,400i,500,600,700&display=swap"
+		rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Lato:300,400,400i,700&display=swap" rel="stylesheet">
+	<!-- Template CSS -->
+
+</head>
+
+<body>
+<style>
+			.dropdown-btn {
+  background-color: #000000;
+  color: #f7f1f1;
+  padding: 10px;
+  width: 320px;
+  cursor: pointer;
+  z-index: 10;
+  overflow: hidden;
+-webkit-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.dropdown-area {
+  width: 320px;
+  transform: translateY(-35px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+
+}
+
+.dropdown-area ul {
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown-area ul li {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.dropdown-area ul li:nth-child(1) {
+  background-color: #ebe6e6;
+  margin-top: -20px;
+  transition: .3s;
+}
+
+.dropdown-area ul li:nth-child(2) {
+  background-color: #f5f1f1;
+  margin-top: -40px;
+  transition: .5s;
+}
+
+.dropdown-area ul li:nth-child(3) {
+  background-color: #f7f2f2;
+  margin-top: -40px;
+  transition: .6s;
+  color: #161515;
+}
+
+.dropdown-area ul li:nth-child(4) {
+  background-color: #656565;
+  margin-top: -40px;
+  transition: .7s;
+  color: #181818;
+}
+
+.dropdown-area ul li:nth-child(5) {
+  background-color: #484848;
+  margin-top: -40px;
+  transition: .8s;
+  color: #191818;
+}
+
+
+.activeDropArea {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(-15px);
+}
+
+.activeDropArea ul li:nth-child(1),.activeDropArea ul li:nth-child(2),.activeDropArea ul li:nth-child(3),.activeDropArea ul li:nth-child(4),.activeDropArea ul li:nth-child(5) {
+  margin-top: 0;
+}
+  </style>
+  	<script>let dropArea = document.getElementById('dropArea');
+		function openDropdown() {
+			console.log("Dropdown");
+			dropArea.classList.toggle("activeDropArea");
+		}</script>
+	<script>
+		function copyTextValue() {
+			var e = document.getElementById("select");
+			var val = e.options[e.selectedIndex].value;
+			document.getElementById("1").value = val;
+		}
+	</script>
+	<!--w3l-header-->
+	<section class="w3l-top-header-content">
+		<div class="hny-top-menu">
+			<div class="container">
+				<div class="row">
+					<ul class="accounts col-sm-8">
+						<li class="top_li"><span class="fa fa-clock-o"></span> <a href="#">Monday - Friday: 10:00 -
+								18:00</a>
+						</li>
+						<li class="top_li mr-lg-0"><span class="fa fa-envelope-o"></span> <a
+								href="mailto:mail@company.com" class="mail"> cleanfreshly10@gmail.com</a>
+
+						</li>
+						<li class="top_li"><span class="fa fa-phone"></span> <a href="tel:+142 5897555">8921207450
+								</a>
+						</li>
+
+					</ul>
+<!--					<ul class="social-top col-sm-4">-->
+<!--						<li><a href="#"><span class="fa fa-facebook"></span></a></li>-->
+<!--						<li><a href="#"><span class="fa fa-instagram"></span></a> </li>-->
+<!--						<li><a href="#"><span class="fa fa-twitter"></span></a></li>-->
+<!--						<li><a href="#"><span class="fa fa-vimeo"></span></a></li>-->
+<!--						<li>-->
+<!--							<a href="#">-->
+<!--								<span class="fa fa-linkedin"></span>-->
+<!--							</a>-->
+<!--						</li>-->
+<!--					</ul>-->
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--//top-header-content-->
+	<header class="w3l-header-nav">
+		<!--/nav-->
+		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
+			<a href="../customers"><span class="fa fa-arrow-circle-left  btn btn-secondary "></span></a>
+			<div class="container">
+				<h1><a class="navbar-brand" >Clean<span>Freshly</span></a></h1>
+				<!-- if logo is image enable this
+						<a class="navbar-brand" href="#index">
+							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+						</a> -->
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<!-- <span class="navbar-toggler-icon"></span> -->
+					<span class="fa icon-expand fa-bars"></span>
+					<span class="fa icon-close fa-times"></span>
+				</button>
+
+
+			</div>
+		</nav>
+		<!--//nav-->
+	</header>
+	{% if messages %}
+<div class="container">
+<div class="alert alert-success alert-dismissible messages">
+    {% for message in messages %}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+     {{message}}
+  </div>
+     {% endfor %}
+</div>
+{% endif %}
+<!--	------------------------------------>
+
+<!--------------------------------------------------->
+<div class=table-responsive">
+<table class="table table-lg" style="font-size:12px; margin: 20px auto; width: 100%; " border="2">
+    <tr>
+
+			<th>booking_id</th>
+			<th>booking_date</th>
+			<th>name</th>
+        	<th>email</th>
+        	<th>address</th>
+        	<th>number</th>
+			<th>service_name</th>
+			<th>service_date</th>
+			<th>service_price</th>
+        	<th   style="text-align: center;">status</th>
+			<th>emp_status</th>
+
+			<th colspan="3"  style="text-align: center;">Action</th>
+    </tr>
+    {% for item in booked_details %}
+
+
+    <tr>
+
+        <td>{{ item.booking.booking_id }}</td>
+		<td>{{item.booking.created_at}}</td>
+        <td>{{ item.booking.b_name }}</td>
+        <td>{{ item.booking.email }}</td>
+		<td>{{ item.booking.address }}</td>
+		<td>{{ item.booking.number }}</td>
+		<td>{{item.booking.w.s_name}}</td>
+		<td>{{item.booking.date}}</td>
+		<td>{{item.booking.w.s_price}}</td>
+		<td>{{ item.booking.status }}</td>
+
+
+		<td>
+		{% for i in d %}
+			{%if item.booking.booking_id == i.booking_id%}
+			{{ i.status }}
+			{%endif%}
+			{% endfor %}
+
+		</td>
+
+		{% if item.booking.status != 'Accepted' and item.booking.status != 'Finished' %}
+			<td><a href="../u_bookreq_cancel/{{item.booking.pk}}" onclick="return confirm('Are you sure you want to delete?')"><input type="submit" class="ml-lg-3 mt-lg-0 mt-3 btn btn-warning " value="cancel"></a></td>
+			{%endif%}
+
+
+			<td>
+				{% if item.booking.status == 'Accepted' and item.booking.payment_status != 'Cash Paid' %}
+				<a href="{% url 'razorpay' item.booking.w.s_price item.booking.pk %}"><input type="submit" class="ml-lg-3 mt-lg-0 mt-3 btn btn-primary " value="payment"></a>
+			{%endif%}
+			</td>
+
+			<td>
+				{% if item.booking.status != 'Finished' %}
+				<a href="../send_review_form/{{item.booking.pk}}"><input type="submit" class="ml-lg-3 mt-lg-0 mt-3 btn btn-info " value="send review"></a>
+			{%endif%}
+			</td>
+
+
+<!--			<a href="../a_book_send/{{item.booking.pk}}"><input type="submit" class="ml-lg-3 mt-lg-0 mt-3 btn btn-info " value="send"></a></td>-->
+
+
+
+
+        <!-- You might have action buttons or links here -->
+    </tr>
+    {% endfor %}
+
+
+</table>
+</div>
+<!------------------------------------------------------><br><br><br><br><br>
+<footer class="w3l-footer-66">
+		<div class="footer-28-main">
+			<div class="container">
+				<div class="row footer-hny-top">
+					<div class="col-lg-6 footer-logo pl-lg-0">
+						<h2><a class="navbar-brand" >Clean<span>Freshly</span></a></h2>
+						<!-- if logo is image enable this
+						<a class="navbar-brand" href="#index">
+							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+						</a> -->
+					</div>
+				</div>
+				<div class="row footer-top-5">
+
+					<div class="col-lg-5 col-md-6 footer-list-28 pl-lg-5">
+						<h6 class="footer-title-28">list of Services</h6>
+						<ul class="d-grid footer-column">
+							<li><a href="services">Plumbing</a></li>
+							<li><a href="services">Carpenter</a></li>
+							<li><a href="services">Furniture moving</a></li>
+							<li><a href="services">Tank cleaner</a></li>
+							<li><a href="services">CCTV technician</a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-3 col-md-6 footer-list-28 pl-lg-9">
+						<h6 class="footer-title-28">Working Hours</h6>
+						<ul class="working-hours">
+							<li><span>Monday</span> : 8AM - 6pM</li>
+							<li><span>Tuesday</span> : 8AM - 6pM</li>
+							<li><span>Wednesday</span> : 8AM - 6pM</li>
+							<li><span>Thursday - Friday </span> : 8AM - 6pM</li>
+							<li><span>Sunday</span> : 8AM - 6pM</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-w3l">
+	<p>&copy; 2024. All rights reserved | Design by sachin James</p>
+</div>
+		</div>
+		<!-- move top -->
+		<button onclick="topFunction()" id="movetop" title="Go to top">
+			<span class="fa fa-angle-up"></span>
+		</button>
+		<script>
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function () {
+				scrollFunction()
+			};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("movetop").style.display = "block";
+				} else {
+					document.getElementById("movetop").style.display = "none";
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
+		<!-- Monthlyve top -->
+
+	</footer>
+</body>
+
+</html>
+
+<script src="{% static 'assets/js/jquery-3.3.1.min.js'%}"></script>
+
+
+<!--//-->
+<script>
+	$(function () {
+		$('.navbar-toggler').click(function () {
+			$('body').toggleClass('noscroll');
+		})
+	});
+</script>
+<!--/scroll-down-JS-->
+<!-- stats -->
+<script src="{% static 'assets/js/jquery.waypoints.min.js'%}"></script>
+<script src="{% static 'assets/js/jquery.countup.js'%}"></script>
+<script>
+	$('.counter').countUp();
+</script>
+<!-- //stats -->
+<!-- //script -->
+
+<script src="{% static 'assets/js/bootstrap.min.js'%}"></script>

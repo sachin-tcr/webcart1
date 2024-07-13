@@ -1,0 +1,43 @@
+# models.py
+from django.db import models
+
+class MyModel(models.Model):
+    RADIO_CHOICES = (
+        ('option1', 'Option 1'),
+        ('option2', 'Option 2'),
+        ('option3', 'Option 3'),
+    )
+    radio_field = models.CharField(max_length=10, choices=RADIO_CHOICES)
+
+# forms.py
+from django import forms
+from .models import MyModel
+
+class MyModelForm(forms.ModelForm):
+    class Meta:
+        model = MyModel
+        fields = ['radio_field']
+        widgets = {
+            'radio_field': forms.RadioSelect(choices=MyModel.RADIO_CHOICES)
+        }
+
+# views.py
+from django.shortcuts import render, redirect
+from .forms import MyModelForm
+
+def my_view(request):
+    if request.method == 'POST':
+        form = MyModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('success_url')
+    else:
+        form = MyModelForm()
+    return render(request, 'my_template.html', {'form': form})
+
+# my_template.html
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit</button>
+</form>
